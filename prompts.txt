@@ -1,0 +1,63 @@
+Prompt:
+[I] “Suggest me relevant academic papers dated from 2020 on about Augmented Reality Navigation systems in automotive environment”
+[II] “Role: Act as a senior academic researcher, expert in Human-Computer Interaction (HCI), spatial computing, and automotive engineering.
+Objective: Based exclusively on the documents uploaded to this notebook, draft an academic and critical "Reading Guide" on Augmented Reality (AR) navigation systems for the automotive sector. The document is intended for researchers and PhD students who need to navigate the state of the art.
+Style and Tone: Rigorous, objective, formal. Avoid generic conclusions or enthusiastic tones. Prioritize critical analysis, actively comparing sources and highlighting discrepancies. Always use english.
+Required Structure for the Reading Guide:
+Executive Summary and Domain Definition: Summarize in one paragraph the focus of the uploaded literature and the key definitions adopted by the authors for automotive AR (e.g., Head-Up Displays, windshield projections).
+Taxonomy of Themes: Group the papers by macro-areas of investigation (e.g., UI/UX Design, Technical Challenges like latency/calibration, Safety and Cognitive Load, User Acceptance).
+Methodological Analysis (Critical Appraisal): Evaluate the research methods used in the papers. Which ones use driving simulators vs. real-world road tests? What are the sample sizes? Which quantitative metrics (e.g., eye-tracking, reaction times) or qualitative metrics (e.g., NASA-TLX questionnaires) are predominantly employed?
+Consensus, Conflicts, and Limitations: Highlight the points on which the literature agrees and the areas of open debate. Point out the biases or limitations declared by the authors (e.g., ideal lighting conditions, non-final hardware).
+Research Gaps (Future Directions): Based on the conclusions of the documents, compile a bulleted list of current gaps in the research that require further investigation.
+Output Constraints:
+Strictly cite the uploaded sources for every claim (using the notebook's citation markers).
+If information requested in the previous points is not present in the sources, explicitly state it (e.g., "The uploaded literature does not provide data on real-world road tests"). Do not invent or infer external information.”
+[III] “Point out the general AR navigation system architecture in automotive devices and the articles that describe it”
+
+[IV] “You are a senior cyber security engineer working on an automotive risk assessment task.
+
+
+[IMAGE with the designed Architecture]
+
+The architecture described in the image works as follows:
+The architecture is composed of four required areas in which the different parts of the task are performed, and a main Electronic Control Unit working as the main computational unit of the system. 
+
+V2X area:
+The V2X area consists of a V2X module responsible for extravehicular communication with targets such as vehicles, infrastructure, cloud systems, and pedestrians. Through this module, the vehicle can share and receive navigation information, such as maps, and information about other street users, such as pedestrians [3] or vehicles [4].
+
+
+Dynamics area:
+The dynamics area is made of two kinds of components: Dynamics Sensors, designed to capture dynamics data from the vehicle, such as speed or steering angle [2]; and a Dynamics Electronic Control Unit that is responsible for controlling Dynamics Sensors and pre-elaborating and aggregating data to share with the main ECU.
+
+
+Cockpit area:
+The Cockpit area represents the interior sensing infrastructure, composed of cockpit sensors and its dedicated cockpit processing unit, which collectively monitor the psychological state of the driver by using cameras, as in the Driver Monitoring Systems (DMS) [5] proposed in the literature. 
+
+
+Augmented Reality area:
+The AR area comprises the main execution area, where the visual representations take place after being processed by the Electronic Control Unit, which executes body spatial transformations that generate the virtual frames [6]. AR output device, as the Picture Generation Unit [7] projects virtual light rays onto the windshield film, presenting the world-locked graphics, is responsible for the visualization of produced content for the Advanced Driver-Assistance Systems [2].
+
+
+
+Main ECU area:
+The main ECU is the component required to perform main computation and Augmented Reality content production. It communicates internally with all the other ECUs to receive input data from sensors and to send diagnostic signals to other areas, aggregates data and elaborates with AI models [1] the information to provide in output.
+
+References:
+[1] M. N. Mohammed et al, "A Review of Lightweight Object Detection Algorithms for Mobile Augmented Reality," International Journal of Advanced Computer Science and Applications, vol. 13, (11), 2022. Available: https://www.proquest.com/scholarly-journals/review-lightweight-object-detection-algorithms/docview/2758768425/se-2. DOI: https://doi.org/10.14569/IJACSA.2022.0131162.
+
+[2] Z. Wang, K. Han and P. Tiwari, "Augmented Reality-Based Advanced Driver-Assistance System for Connected Vehicles," 2020 IEEE International Conference on Systems, Man, and Cybernetics (SMC), Toronto, ON, Canada, 2020, pp. 752-759, doi: 10.1109/SMC42975.2020.9283462. keywords: {Visualization;Connected vehicles;Roads;Games;Planning;Vehicle-to-everything;Man-machine systems}, 
+
+[3] D. H. Roh and J. Y. Lee, "Augmented Reality-Based Navigation Using Deep Learning-Based Pedestrian and Personal Mobility User Recognition—A Comparative Evaluation for Driving Assistance," in IEEE Access, vol. 11, pp. 62200-62211, 2023, doi: 10.1109/ACCESS.2023.3286872.
+keywords: {Vehicles;Visualization;Automotive components;Anomaly detection;Automobiles;Autonomous vehicles;Deep learning;Augmented reality;head-up display;personal mobility user recognition;driving assistance},
+
+[4] A. Clérigo, G. Silva, M. Schrapel, P. Rito, S. Sargento and A. Vinel, "Cooperative Augmented Reality: Displaying Occluded Vehicles using V2X Communications," 2025 IEEE Vehicular Networking Conference (VNC), Porto, Portugal, 2025, pp. 1-8, doi: 10.1109/VNC64509.2025.11054191. keywords: {Power demand;Urban areas;Systems architecture;Road safety;Real-time systems;Safety;Time factors;Reliability;Augmented reality;Vehicle-to-everything;Vehicle-To-Everything;Augmented Reality;Vulnerable Road User;Cyclist Safety;See Through Vision},
+
+[5] J.-H. Lee, I. Yanusik, Y. Choi, B. Kang, C. Hwang, J. Park, D. Nam, and S. Hong, "Automotive augmented reality 3D head-up display based on light-field rendering with eye-tracking," Optics Express, vol. 28, no. 20, pp. 29788–29804, 2020. DOI: 10.1364/OE.404318
+
+[6] R. Kriesten, M. Schrapel, P. Rito, S. Sargento, and A. Vinel, "Augmented Reality on LiDAR data: Going beyond Vehicle-in-the-Loop for Automotive Software Validation," in Proc. 14th International Conference on Advanced Geographic Information Systems, Applications, and Services (SIMUL), 2022.
+
+[7] C. Zhou, W. Qiao, J. Hua, and L. Chen, "Automotive Augmented Reality Head-Up Displays," Micromachines, vol. 15, no. 4, Art. no. 442, 2024. DOI: 10.3390/mi15040442
+
+
+Provide me a threat analysis using STRIDE following this format as in the Medini Analyze Tool:
+[ID - NAME - ASSET - To Be Assessed - CATEGORY]”
