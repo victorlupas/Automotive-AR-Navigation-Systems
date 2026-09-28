@@ -1,0 +1,55 @@
+ID,NAME,ASSET,To Be Assessed,CATEGORY,ASSET (original),MAPPING NOTE
+V2X-01,Spoofed V2X target identity (ghost vehicle / RSU / pedestrian device),V2XT TO V2M,Yes,Spoofing,V2X External Targets <-> V2X Module,'<->' link; direction set from threat content
+V2X-02,Manipulation of V2X broadcast content (maps / object position / speed),V2XT TO V2M,Yes,Tampering,V2X External Targets <-> V2X Module,'<->' link; direction set from threat content
+V2X-03,Non-attributable malicious V2X message (no signing / audit trail),V2XT TO V2M,Yes,Repudiation,V2X External Targets <-> V2X Module,'<->' link; direction set from threat content
+V2X-04,Eavesdropping on V2X traffic -> location / trajectory tracking,V2XT TO V2M; V2XM TO V2XT,Yes,Information Disclosure,V2X External Targets <-> V2X Module,'<->' link; direction set from threat content (both directions)
+V2X-05,RF jamming / channel flooding -> loss of cooperative AR content,V2XT TO V2M,Yes,Denial of Service,V2X External Targets <-> V2X Module,'<->' link; direction set from threat content
+V2X-06,Exploitation of V2XM protocol stack (malformed message parsing) to gain code execution,V2X Module,Yes,Elevation of Privilege,V2X Module,
+V2X-07,Injection of forged V2X-derived data impersonating V2XM on internal bus,V2X TO MECU,Yes,Spoofing,V2X Module <-> Main ECU,'<->' link; direction set from threat content
+V2X-08,Alteration of V2X-derived navigation / object data in transit,V2X TO MECU,Yes,Tampering,V2X Module <-> Main ECU,'<->' link; direction set from threat content
+V2X-09,No provenance of V2X data consumed by MECU (untraceable faulty input),V2X TO MECU,Yes,Repudiation,V2X Module <-> Main ECU,'<->' link; direction set from threat content
+V2X-10,Internal bus sniffing of received V2X content,V2X TO MECU,Yes,Information Disclosure,V2X Module <-> Main ECU,'<->' link; direction set from threat content
+V2X-11,Flooding MECU with high-rate V2X data / blocking V2XM->MECU path,V2X TO MECU,Yes,Denial of Service,V2X Module <-> Main ECU,'<->' link; direction set from threat content
+V2X-12,Compromised V2XM abusing diagnostic channel towards MECU,V2X TO MECU,Yes,Elevation of Privilege,V2X Module <-> Main ECU,'<->' link; direction set from threat content
+CP-01,Presentation / replay attack against DMS cameras (photo / mask / recorded video),Cockpit sensors,Yes,Spoofing,Cockpit Sensors,
+CP-02,Manipulation of video / derived driver-state data,CS TO CPECU,Yes,Tampering,Cockpit Sensors <-> Cockpit ECU,'<->' link; direction set from threat content
+CP-03,Unlogged drowsiness / distraction alert (deniable alarm suppression),CS TO CPECU,Yes,Repudiation,Cockpit Sensors <-> Cockpit ECU,'<->' link; direction set from threat content
+CP-04,Theft of driver imagery / psychological profile (GDPR-relevant),Cockpit ECU; Cockpit sensors,Yes,Information Disclosure,Cockpit ECU / Cockpit Sensors,
+CP-05,Camera blinding (IR / laser) or CPECU overload -> DMS unavailable,CS TO CPECU,Yes,Denial of Service,Cockpit Sensors <-> Cockpit ECU,'<->' link; direction set from threat content
+CP-06,Code execution on CPECU via crafted media stream -> cockpit domain pivot,Cockpit ECU,Yes,Elevation of Privilege,Cockpit ECU,
+CP-07,Forged driver-state messages impersonating CPECU,CPECU TO MECU,Yes,Spoofing,Cockpit ECU <-> Main ECU,'<->' link; direction set from threat content
+CP-08,Alteration of driver-state data in transit,CPECU TO MECU,Yes,Tampering,Cockpit ECU <-> Main ECU,'<->' link; direction set from threat content
+CP-09,Missing audit trail of driver-state-driven AR adaptations,CPECU TO MECU,Yes,Repudiation,Cockpit ECU <-> Main ECU,'<->' link; direction set from threat content
+CP-10,Interception of sensitive driver-state data on internal link,CPECU TO MECU,Yes,Information Disclosure,Cockpit ECU <-> Main ECU,'<->' link; direction set from threat content
+CP-11,Blocking / flooding CPECU<->MECU link -> AR not adapted to driver state,CPECU TO MECU,Yes,Denial of Service,Cockpit ECU <-> Main ECU,'<->' link; direction set from threat content
+CP-12,Misuse of MECU diagnostic services via compromised CPECU,CPECU TO MECU,Yes,Elevation of Privilege,Cockpit ECU <-> Main ECU,'<->' link; direction set from threat content
+DYN-01,Injection of forged sensor values (speed / steering angle),DS TO DECU,Yes,Spoofing,Dynamics Sensors <-> Dynamics ECU,'<->' link; direction set from threat content
+DYN-02,Manipulated dynamics data (offset / scale) -> world-locked AR misalignment,DS TO DECU,Yes,Tampering,Dynamics Sensors <-> Dynamics ECU,'<->' link; direction set from threat content
+DYN-03,Non-attributable corrupted sensor data,DS TO DECU,Yes,Repudiation,Dynamics Sensors <-> Dynamics ECU,'<->' link; direction set from threat content
+DYN-04,Leakage of driving-behavior data (profiling),DS TO DECU,Yes,Information Disclosure,Dynamics Sensors <-> Dynamics ECU,'<->' link; direction set from threat content
+DYN-05,Sensor bus flooding / DECU outage -> AR loses pose data,DS TO DECU,Yes,Denial of Service,Dynamics Sensors <-> Dynamics ECU,'<->' link; direction set from threat content
+DYN-06,Privileged sensor configuration control via compromised DECU,Dynamics ECU,Yes,Elevation of Privilege,Dynamics ECU,
+DYN-07,Forged aggregated dynamics data sent to MECU,DECU TO MECU,Yes,Spoofing,Dynamics ECU <-> Main ECU,'<->' link; direction set from threat content
+DYN-08,Alteration of aggregated dynamics data in transit,DECU TO MECU,Yes,Tampering,Dynamics ECU <-> Main ECU,'<->' link; direction set from threat content
+DYN-09,Missing data provenance for AI model inputs,DECU TO MECU,Yes,Repudiation,Dynamics ECU <-> Main ECU,'<->' link; direction set from threat content
+DYN-10,Eavesdropping on dynamics data link,DECU TO MECU,Yes,Information Disclosure,Dynamics ECU <-> Main ECU,'<->' link; direction set from threat content
+DYN-11,Blocking / flooding DECU<->MECU path -> AR starved of alignment data,DECU TO MECU,Yes,Denial of Service,Dynamics ECU <-> Main ECU,'<->' link; direction set from threat content
+DYN-12,Unauthorized diagnostics / control requests from DECU to MECU,DECU TO MECU,Yes,Elevation of Privilege,Dynamics ECU <-> Main ECU,'<->' link; direction set from threat content
+AR-01,Forged AR frames / content impersonating MECU -> false HUD warnings,MECU TO ARDC,Yes,Spoofing,Main ECU <-> AR Device Controller,'<->' link; direction set from threat content
+AR-02,Modification of virtual frames / spatial transformation output -> displaced world-locked graphics,MECU TO ARDC,Yes,Tampering,Main ECU <-> AR Device Controller,'<->' link; direction set from threat content
+AR-03,Untraceable content decisions (which warning was displayed),MECU TO ARDC,Yes,Repudiation,Main ECU <-> AR Device Controller,'<->' link; direction set from threat content
+AR-04,Sniffing of AR content (navigation / ADAS data) on internal link,MECU TO ARDC,Yes,Information Disclosure,Main ECU <-> AR Device Controller,'<->' link; direction set from threat content
+AR-05,ARDC flooding / blocking -> HUD blackout or flicker / driver distraction,AR Device Controller,Yes,Denial of Service,AR Device Controller,
+AR-06,Unauthorized control of display parameters via compromised ARDC,AR Device Controller,Yes,Elevation of Privilege,AR Device Controller,
+AR-07,Forged PGU control commands impersonating ARDC,ARDC TO AROD,Yes,Spoofing,AR Device Controller <-> AR Output Device,'<->' link; direction set from threat content
+AR-08,Altered projection (brightness / geometry) -> glare / misleading safety cues,ARDC TO AROD,Yes,Tampering,AR Device Controller <-> AR Output Device,'<->' link; direction set from threat content
+AR-09,Denial of display fault origin between ARDC and AROD,ARDC TO AROD; AROD TO ARDC,Yes,Repudiation,AR Device Controller <-> AR Output Device,'<->' link; direction set from threat content (both directions)
+AR-10,Optical emanations / HUD content visible outside cabin (shoulder surfing),AR Output Device,Yes,Information Disclosure,AR Output Device,
+AR-11,AROD shutdown or max-brightness abuse -> visualization loss / hardware damage,AR Output Device,Yes,Denial of Service,AR Output Device,
+AR-12,AROD firmware compromise -> persistent content manipulation,AR Output Device,Yes,Elevation of Privilege,AR Output Device,
+MECU-01,Forged diagnostic signals broadcast by MECU to all areas,Main ECU,Yes,Spoofing,Main ECU,
+MECU-02,AI model poisoning / adversarial inputs / firmware tampering -> wrong AR content generation,Main ECU,Yes,Tampering,Main ECU,
+MECU-03,Denial of issued diagnostics / generated content (no secure logging),Main ECU,Yes,Repudiation,Main ECU,
+MECU-04,Exfiltration of aggregated sensitive data (maps / driver state / dynamics) via debug / memory interfaces,Main ECU,Yes,Information Disclosure,Main ECU,
+MECU-05,Resource exhaustion (CPU / GPU) via crafted inputs -> delayed or absent AR rendering,Main ECU,Yes,Denial of Service,Main ECU,
+MECU-06,Full MECU compromise -> control over all connected ECUs (central hub role),Main ECU,Yes,Elevation of Privilege,Main ECU,
