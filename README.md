@@ -1,10 +1,7 @@
 # 🛡️ Automotive AR Navigation Systems: Threat Analysis
 
-> A comparative study evaluating the threat modeling capabilities of Large Language Models (LLMs) versus expert tools for Automotive Augmented Reality (AR) Navigation Systems using the STRIDE framework.
+> This is a project that showcases the **Threat Analysis** of an AR navigation system for an automotive device using the **STRIDE model** (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege) against the threat-generation performance of various leading AI models.
 
-## 📖 Project Overview
-
-This is a project that showcases the **Threat Analysis** of an AR navigation system for an automotive device using the **STRIDE model** (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege) against the threat-generation performance of various leading AI models.
 
 ## 📂 Repository Structure
 
@@ -16,6 +13,3 @@ This is a project that showcases the **Threat Analysis** of an AR navigation sys
 
 * **📝 Prompts**  
   Includes a mfile containing the exact prompts given to the LLMs.
-
----
-*Built for researchers and engineers exploring automotive cybersecurity, AR system vulnerabilities, and AI-assisted threat modeling.*
