@@ -1,6 +1,6 @@
 # 🛡️ Automotive AR Navigation Systems: Threat Analysis
 
-> This is a project that showcases the **Threat Analysis** of an AR navigation system for an automotive device using the **STRIDE model** (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege) against the threat-generation performance of various leading AI models.
+> This is a project that showcases the Threat Analysis of an AR navigation system for an automotive device using the STRIDE model (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of Privilege) against the threat-generation performance of various leading AI models.
 
 
 ## 📂 Repository Structure
